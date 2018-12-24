@@ -18,7 +18,7 @@ permalink: nshipster-language-server-protocol
 
 > 对于苹果公司而言，为所有 Swift 开发者 —— 包括非苹果平台上的 —— 提供高质量的工具支持非常重要。我们希望与开源社区合作，将精力集中在构建 Xcode 和其他编辑器、其他平台可以共享的公共基础设施上。为实现这一目标，[……]，我们决定支持 LSP。
 >
-> _Argyrios Kyrtzidis，2018 年 10 月 15 号_
+> _Argyrios Kyrtzidis，2018 年 10 月 15 日_
 
 **这可能是苹果自 2014 年将 Swift 作为开源软件发布以来，为 Swift 做出的最重要的决定。** 这对于 APP 开发者来说是一件大事，对于其他平台上的 Swift 开发者来说更是一件大事。
 
@@ -32,11 +32,11 @@ permalink: nshipster-language-server-protocol
 
 ![lsp-languages-times-editors.svg](https://nshipster.com/assets/lsp-languages-times-editors-b9a398af0dea85f2ad6dcf5412fbcb451a43bc90091d5e3ab3b1140da9926b3e.svg)
 
-然后，你就发现各种组合形成了一种支离破碎的兼容。有些编辑器和部分语言深度集成，但除此之外几乎什么都干不了；其他编辑器则比较通用，对很多语言都提供了基本的支持。（IDE 这个术语通常用来来描述前者。)
+然后，你就发现各种组合形成了一种支离破碎的兼容。有些编辑器和部分语言深度集成，但除此之外几乎什么都干不了；其他编辑器则比较通用，对很多语言都提供了基本的支持。（IDE 这个术语通常用来描述前者。)
 
 举个奇葩的例子：_你不用 Xcode 来开发 APP，却偏用来干其他事情。_
 
-为了更好的支持某一特定的语言，编辑器必须编写一些集成代码 —— 要么直接写在项目里，要么通过插件。由于不同语言和编辑器的实现机制不一样，因此比方说 Vim 改进了对 Ruby 支持，但这并不能让它更好地支持 Python，也不能让 Ruby 在 Atom 上运行的更好。最终的结果是：大量精力浪费在了不同技术的兼容上。
+为了更好的支持某一特定的语言，编辑器必须编写一些集成代码（integration code）—— 要么直接写在项目里，要么通过插件。由于不同语言和编辑器的实现机制不一样，因此比方说 Vim 改进了对 Ruby 支持，但这并不能让它更好地支持 Python，也不能让 Ruby 在 Atom 上运行的更好。最终的结果是：大量精力浪费在了不同技术的兼容上。
 
 我们上面描述的情况通常被称为 _M × N 问题_，即最终的集成方案数量为编译器数量 M 与语言数量 N 的乘积。Language Server Protocol 所做的事情就是将 M × N 问题变成 _M + N 问题_。
 
@@ -161,7 +161,7 @@ LLVM 的核心是中间表示（intermediate representation，IR）。LLVM 所�
 
 到目前为止，阻碍 Swift 被主流采用的最大因素之一是它对 Xcode 的依赖。
 
-人们会有很多质疑，当有那么多优秀的、门槛低很多的替代方案存在的情况下，为什么还要让 Web 开发者或机器学习工程师仅仅为了尝试 Swift 而去下载 Xcode？支持 Language Server Protocol 可以让苹果生态圈以外的人更容易地使用他们熟悉工具去感受 Swift。
+人们会有很多质疑，当有那么多优秀的、门槛低很多的替代方案可选的情况下，为什么还要让 Web 开发者或机器学习工程师仅仅为了尝试 Swift 而去下载 Xcode？支持 Language Server Protocol 可以让苹果生态圈以外的人更容易地使用他们熟悉工具去感受 Swift。
 
 ### Xcode 变得更好
 
