@@ -36,7 +36,7 @@ permalink: nshipster-language-server-protocol
 
 举个奇葩的例子：_你不用 Xcode 来开发 APP，却偏用来干其他事情。_
 
-为了更好的支持某一特定的语言，编辑器必须编写一些集成代码（integration code）—— 要么直接写在项目里，要么通过插件。由于不同语言和编辑器的实现机制不一样，因此比方说 Vim 改进了对 Ruby 支持，但这并不能让它更好地支持 Python，也不能让 Ruby 在 Atom 上运行的更好。最终的结果是：大量精力浪费在了不同技术的兼容上。
+为了更好地支持某一特定的语言，编辑器必须编写一些集成代码（integration code）—— 要么直接写在项目里，要么通过插件。由于不同语言和编辑器的实现机制不一样，因此比方说 Vim 改进了对 Ruby 支持，但这并不能让它更好地支持 Python，也不能让 Ruby 在 Atom 上运行地更好。最终的结果是：大量精力浪费在了不同技术的兼容上。
 
 我们上面描述的情况通常被称为 _M × N 问题_，即最终的集成方案数量为编译器数量 M 与语言数量 N 的乘积。Language Server Protocol 所做的事情就是将 M × N 问题变成 _M + N 问题_。
 
@@ -66,7 +66,7 @@ Language Server Protocol 为支持的语言提供了一套通用的功能集，�
 
 对于 LSP，_client_ 是指编辑器 —— 或者更宽泛一点，是指工具，_server_ 是指本地独立进程里运行的一个外部程序。
 
-至于 _protocol_ 本身，LSP 类似于一个精简版的 HTTP：
+至于名字中包含 _protocol_，是因为 LSP 类似于一个精简版的 HTTP：
 
 - 每个消息都由报头部分和内容部分组成。
 - 报头部分包含一个必填的 `Content-Length` 字段，用于说明内容部分的大小（以字节为单位），以及一个可选的 `Content-Type` 字段（默认值为 `application/vscode-jsonrpc; charset=utf-8`）。
