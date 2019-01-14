@@ -1,5 +1,5 @@
 title: "Language Server Protocol"
-date: 2018-11-19
+date: 2019-01-15
 tags: [Swift, NSHipster]
 categories: [Swift, NSHipster]
 permalink: nshipster-language-server-protocol
@@ -9,8 +9,8 @@ permalink: nshipster-language-server-protocol
 作者=Mattt
 原文日期=2018-11-19
 译者=雨谨
-校对=
-定稿=
+校对=numbbbbb,pmst
+定稿=Forelax
 
 <!--此处开始正文-->
 
@@ -23,6 +23,8 @@ permalink: nshipster-language-server-protocol
 **这可能是苹果自 2014 年将 Swift 作为开源软件发布以来，为 Swift 做出的最重要的决定。** 这对于 APP 开发者来说是一件大事，对于其他平台上的 Swift 开发者来说更是一件大事。
 
 为了理解其中的原因，本周的文章将研究 Language Server Protocol 解决了什么问题，它是如何工作的，以及它的长期影响可能是什么。
+
+<!--more-->
 
 > **更新**：sourcekit-lsp 项目现在已经可以 [在 GitHub 上访问](https://github.com/apple/sourcekit-lsp) 了。
 
