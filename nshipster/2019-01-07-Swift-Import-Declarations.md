@@ -70,7 +70,7 @@ bike() // 正确，调用 Triathlon.bike
 run() // 正确，调用 Triathlon.run
 ```
 
-但是如果同时导入两个模块，我们不能全部使用非限定函数名。铁人三项和五项都包括游泳和跑步，所以对 `swim()` 的引用是模糊的。
+但是如果同时 import 两个模块，我们不能全部使用非限定函数名。铁人三项和五项都包括游泳和跑步，所以对 `swim()` 的引用是模糊的。
 
 ```swift
 import Triathlon
@@ -114,7 +114,7 @@ import <#kind#> <#module.symbol#>
 | `let`       | 常量        |
 | `var`       | 变量        |
 
-例如，下面的 import 声明只添加了 Pentathlon 模块的 swim() 函数:
+例如，下面的 import 声明只添加了 `Pentathlon` 模块的 `swim()` 函数:
 
 ```swift
 import func Pentathlon.swim
@@ -204,9 +204,9 @@ print("Error!", to: &standardError)
 import <#module.submodule#>
 ```
 
-你很可能在 AppKit 和 Accelerate 等大型的系统 framework 中遇到子模块。虽然这种<dfn>[umbrella framework（伞架构）](https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPFrameworks/Concepts/FrameworkAnatomy.html#//apple_ref/doc/uid/20002253-97623-BAJJHAJC)</dfn> 不再是一种最佳实践，但它们在 20 世纪初苹果向 Cocoa 过渡的过程中发挥了重要作用。
+你很可能在 AppKit 和 Accelerate 等大型的系统 framework 中遇到子模块。虽然这种 <dfn>[伞架构（umbrella framework）](https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPFrameworks/Concepts/FrameworkAnatomy.html#//apple_ref/doc/uid/20002253-97623-BAJJHAJC)</dfn> 不再是一种最佳实践，但它们在 20 世纪初苹果向 Cocoa 过渡的过程中发挥了重要作用。
 
-例如，你可以仅导入 [Core Services framework](developer.apple.com/documentation/coreservices) 的 [DictionaryServices](/dictionary-services/) 子模块，从而将你的代码与无数已废弃的 API（如 Carbon Core）隔离开来。
+例如，你可以仅 import [Core Services framework](developer.apple.com/documentation/coreservices) 的 [DictionaryServices](/dictionary-services/) 子模块，从而将你的代码与无数已废弃的 API（如 Carbon Core）隔离开来。
 
 ```swift
 import Foundation
@@ -226,10 +226,10 @@ func define(_ word: String) -> String? {
 define("apple") // "apple | ˈapəl | noun 1 the round fruit of a tree..."
 ```
 
-事实上，导入单独的声明和子模块，除了澄清程序员的意图，并不能带来任何真正的好处。这种方式并不会让你的代码编译地更快。由于大部分的子模块似乎都会重新导入它们的 umbrella header（伞头文件），因此这种方式也没法减少自动补全列表上的噪音。
+事实上，单独导入的声明和子模块，除了澄清程序员的意图，并不能带来任何真正的好处。这种方式并不会让你的代码编译地更快。由于大部分的子模块似乎都会重新导入它们的伞头文件（umbrella header），因此这种方式也没法减少自动补全列表上的噪音。
 
 ---
 
 与许多晦涩难懂的高级主题一样，你之所以没有听说过这些 import 声明样式，很可能的是因为你不需要了解它们。如果你已经在没有它们的情况下开发了很多 APP，那么你完全有理由可以相信，你不需要开始使用它们。
 
-相反，这里比较有价值的收获是理解 Swift 编译器如何解决命名冲突。为此，import 声明是一个非常重要的概念。
+相反，这里比较有价值的收获是理解 Swift 编译器如何解决命名冲突。为此，理解 import 声明是非常重要的。
