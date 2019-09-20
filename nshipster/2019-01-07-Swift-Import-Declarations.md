@@ -2,7 +2,7 @@ title: "Swift Import 声明"
 date: 
 tags: [Swift, NSHipster]
 categories: [Swift, NSHipster]
-permalink: 
+permalink: swift-import
 keywords: Swift, NSHipster, Import
 custom_title: 
 description: 作为软件开发人员，我们学到的第一课是如何将概念和功能组织成独立的单元。但是，当命名空间冲突和声明隐藏在阴影时，会发生什么呢？
@@ -22,6 +22,8 @@ description: 作为软件开发人员，我们学到的第一课是如何将概�
 作为软件开发人员，我们学到的第一课是如何将概念和功能组织成独立的单元。在最小的层级上，这意味着思考类型、方法和属性。这些东西构成了模块（module）的基础，而模块又可以被打包成为 library 或者 framework。
 
 在这种方式中，import 声明是将所有内容组合在一起的粘合剂。
+
+<!--more-->
 
 尽管 import 声明非常重要，但大部分 Swift 开发者都只熟悉它的最基本用法：
 
